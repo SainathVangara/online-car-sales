@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Signup Page</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: white;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        background-color: white;
+        border: 1px solid whitesmoke;
+        border-radius: 5px;
+        width: 300px;
+        margin: 100px auto;
+        padding: 40px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h2 {
+        margin: 0;
+        padding-bottom: 20px;
+      }
+
+      .form-group {
+        text-align: left;
+        margin-bottom: 10px;
+      }
+
+      label {
+        display: block;
+        color: black;
+        font-weight: bold;
+        margin: 5px;
+      }
+
+      input {
+        width: 100%;
+        padding: 10px;
+        border: 2px solid whitesmoke;
+        border-radius: 5px;
+      }
+
+      button {
+        background-color: lightblue;
+        border: none;
+        color: black;
+        border-radius: 5px;
+        padding: 10px 20px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        color: white;
+        background-color: blue;
+      }
+      .buttons {
+        display: flex;
+        flex-direction: column;
+      }
+      .buttons a {
+        font-size: 15px;
+        margin: 10px;
+        text-decoration: none;
+      }
+      .gender {
+        display: flex;
+      }
+      .form-group .gender {
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Register</h2>
+      <form action="signup.php" method="post">
+        <div class="form-group">
+          <label for="username">Username:</label>
+          <input type="text" id="name" name="username" required />
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="form-group">
+          <label for="phone">PhoneNo:</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            pattern="[0-9]{10}"
+            required
+          />
+        </div>
+        <div class="form-group gender">
+          <label for="gender">Gender:</label><br />
+          <div class="gender">
+            <input type="radio" id="male" name="gender" value="m" required />
+            <label for="male">Male</label>
+          </div>
+          <div class="gender">
+            <input type="radio" id="female" name="gender" value="f" />
+            <label for="female">Female</label>
+          </div>
+          <div class="gender">
+            <input type="radio" id="other" name="gender" value="o" />
+            <label for="other">Other</label><br /><br />
+          </div>
+        </div>
+        <div class="buttons">
+          <button type="submit">Register</button>
+          <a href="login.html">Already have an account?</a>
+        </div>
+      </form>
+    </div>
+
+    <script></script>
+  </body>
+</html>
